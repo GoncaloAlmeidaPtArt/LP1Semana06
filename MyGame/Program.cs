@@ -6,7 +6,14 @@ namespace MyGame
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello LP!");
+            var aleatorio = new Random();
+
+            for(int x = 0; x < 5; x++)
+            {
+                Console.WriteLine(aleatorio.Next());
+            }
+
+            
         }
     }
 }
