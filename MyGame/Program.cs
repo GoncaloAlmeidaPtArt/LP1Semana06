@@ -6,14 +6,27 @@ namespace MyGame
     {
         private static void Main(string[] args)
         {
-            var aleatorio = new Random();
+            int numeroinimigos = Convert.ToInt32(args[0]);
 
-            for(int x = 0; x < 5; x++)
+            Enemy[] inimigos = new Enemy[numeroinimigos];
+
+            for(int x = 0; x < numeroinimigos; x++)
             {
-                Console.WriteLine(aleatorio.Next());
+                Console.Write($"Nome do inimigo {x + 1}: ");
+                string newName = Console.ReadLine();
+                inimigos[x] = new Enemy(newName);
+                inimigos[x].PickupPowerUp(PowerUp.Health, 23);
+            }
+            
+
+
+            foreach(Enemy y in inimigos)
+            {
+                Console.WriteLine($"{y.GetName()} {y.GetVida()} 0");
             }
 
-            
+            Console.WriteLine(inimigos[0].getStatic());
+
         }
     }
 }
