@@ -61,7 +61,12 @@ namespace RandomDungeon
         // Devolve uma String Representando o Inimigo: "Nome (Vida, Ataque)"
         public override string ToString()
         {
-            // CÓDIGO AQUI
+            return $"{name} ({health}, {attack})";
+        }
+
+        static void GenerateRandomEnemy(int seed)
+        {
+            Enemy inimigo = new Enemy;
         }
     }
 }

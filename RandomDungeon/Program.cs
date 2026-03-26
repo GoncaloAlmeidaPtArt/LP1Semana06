@@ -12,6 +12,7 @@ namespace RandomDungeon
         {
             Arena arena = new Arena(new List<Enemy>());
             Random random = new Random(int.Parse(args[0]));
+            int numeroinimigos
 
             if (args.Length == 2)
             {
@@ -38,7 +39,7 @@ namespace RandomDungeon
             // CÓDIGO AQUI
             
             // Repetir Batalha (Enquanto Existe Mais do que 1 Inimigo)
-            while (// CÓDIGO AQUI)
+            while (arena.enemys
             {
                 // Obter a Lista Atual de Inimigos
                 List<Enemy> enemies = arena.GetEnemies();
