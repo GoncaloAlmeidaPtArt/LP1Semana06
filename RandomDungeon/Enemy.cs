@@ -29,7 +29,7 @@ namespace RandomDungeon
             this.attack = attack;
         }
 
-        static Enemy GenerateRandomEnemy(int seed)
+        public static Enemy GenerateRandomEnemy(int seed)
         {
 
             var random = new Random();

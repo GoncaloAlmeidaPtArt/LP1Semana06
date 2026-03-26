@@ -57,6 +57,7 @@ namespace RandomDungeon
             if(vidafinal == 0)
             {
                 RemoveEnemy(defender);
+                
             }
         }
     }

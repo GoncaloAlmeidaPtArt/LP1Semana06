@@ -1,18 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 
 namespace RandomDungeon
 {
     public class Program
     {
+
         // Argumentos
         // args[0]: Seed para Simulação de Batalhas
         // args[1]: Seed para Criação de Inimigos (Opcional)
+        public int numerodeinimigos = 0;
+
         private static void Main(string[] args)
         {
             Arena arena = new Arena(new List<Enemy>());
             Random random = new Random(int.Parse(args[0]));
-            int numeroinimigos
 
             if (args.Length == 2)
             {
@@ -38,8 +41,9 @@ namespace RandomDungeon
             // Mostra a Lista de Inimigos Atualmente na Arena
             // CÓDIGO AQUI
             
+            int x = 2;
             // Repetir Batalha (Enquanto Existe Mais do que 1 Inimigo)
-            while (arena.
+            while (x > 0)
             {
                 // Obter a Lista Atual de Inimigos
                 List<Enemy> enemies = arena.GetEnemies();
@@ -54,9 +58,10 @@ namespace RandomDungeon
                 
                 // Obter os Objetos Atacante e Defensor
                 Enemy attacker = enemies[attackerIndex];
-                Enemy defender = enemies[defenderIndex];
+                Enemy defender = enemies[attackerIndex];
 
                 arena.Battle(attacker, defender);
+                x = x - 1;
 
             }
 
