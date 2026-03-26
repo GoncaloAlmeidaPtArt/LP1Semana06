@@ -40,6 +40,7 @@ namespace RandomDungeon
 
             // Mostra a Lista de Inimigos Atualmente na Arena
             // CÓDIGO AQUI
+            arena.ShowEnemies();
             
             int x = 2;
             // Repetir Batalha (Enquanto Existe Mais do que 1 Inimigo)
@@ -53,7 +54,6 @@ namespace RandomDungeon
 
                 // Selecionar Aleatoriamente um Defensor
                 // Garantindo que Não Seja o Mesmo que o Atacante
-                int defenderIndex;
                 // CÓDIGO AQUI
                 
                 // Obter os Objetos Atacante e Defensor

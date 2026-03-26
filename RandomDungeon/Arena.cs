@@ -41,6 +41,7 @@ namespace RandomDungeon
             {
                 Console.Write(enemies[x].GetName() + ", ");
             }
+            Console.WriteLine();
         }
         
         // Simula uma Batalha Entre Dois Inimigos
