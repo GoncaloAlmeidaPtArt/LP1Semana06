@@ -39,7 +39,15 @@ namespace RandomDungeon
             Console.Write("Arena: ");
             for(int x = 0; x < enemies.Count; x++)
             {
-                Console.Write(enemies[x].GetName() + ", ");
+                if (x < enemies.Count - 1)
+                {
+                    Console.Write(enemies[x].GetName() + ", ");
+                }
+                else
+                {
+                    Console.Write(enemies[x].GetName());
+                }
+                
             }
             Console.WriteLine();
         }
