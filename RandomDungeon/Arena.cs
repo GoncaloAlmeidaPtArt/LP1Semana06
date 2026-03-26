@@ -46,12 +46,18 @@ namespace RandomDungeon
         // Simula uma Batalha Entre Dois Inimigos
         public void Battle(Enemy attacker, Enemy defender)
         {
-            // Subtrai o Ataque do Atacante à Vida do Defensor
+            // Subtrai o Ataque do Atacante à Vida do Defenso
             // Garante que a Vida Não Fique Negativa
-            // CÓDIGO AQUI
+            int vida = defender.GetHealth();
+            int vidafinal = vida - attacker.GetAttack();
+            if (vidafinal < 0) vidafinal = 0;
+            defender.SetHealth(vidafinal);
             
             // Se a Vida do Defensor Chegar a 0, Remove-o da Arena
-            // CÓDIGO AQUI
+            if(vidafinal == 0)
+            {
+                RemoveEnemy(defender);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.IO.Compression;
 
 namespace RandomDungeon
 {
@@ -26,6 +27,22 @@ namespace RandomDungeon
             this.name = name;
             this.health = health;
             this.attack = attack;
+        }
+
+        static Enemy GenerateRandomEnemy(int seed)
+        {
+
+            var random = new Random();
+
+            int index = random.Next(0, 50);
+            string name = DefaultNames[index];
+
+            int vida = random.Next(50, 100);
+            int ataque = random.Next(5,20);
+
+            Enemy inimigo = new Enemy(name, vida, ataque);
+
+            return inimigo;
         }
 
         public string GetName()
@@ -64,9 +81,6 @@ namespace RandomDungeon
             return $"{name} ({health}, {attack})";
         }
 
-        static void GenerateRandomEnemy(int seed)
-        {
-            Enemy inimigo = new Enemy;
-        }
+
     }
 }
